@@ -121,22 +121,18 @@ body .cta-box h2 {
 
 .hero-grid > *, .proof-grid > *, .format-grid > *, .cta-box > * { min-width: 0; }
 
-/* Section titles use the viewport, not the narrower body-copy column. */
-:root { --heading-gutter: 24px; }
-.program-head, .reviews-head { max-width: none; }
+/* Section headings fill the shared content grid. */
+.program-head, .reviews-head { width: 100%; max-width: none; }
 .process > .container > h2,
 .program-head > h2,
 .reviews-head > h2,
 .choice > .container > h2 {
-  width: calc(100vw - 2 * var(--heading-gutter));
-  max-width: none !important;
-  margin-left: calc((100% - 100vw) / 2 + var(--heading-gutter));
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
   text-wrap: wrap !important;
 }
 h3, h4 { text-wrap: balance; }
-@media (max-width: 560px) {
-  :root { --heading-gutter: 16px; }
-}
 </style>
 </head>
 <body>
